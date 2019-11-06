@@ -1,5 +1,6 @@
 
-
+// "lat": 40.7280089,
+// "lng": -73.9207299
 
 $(document).ready(function () {
     console.log("ready");
@@ -12,7 +13,9 @@ $(document).ready(function () {
         console.log(limit);
         var queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${term}&api-key=mXE3TDSAbRPA9DWkO1lO9cJ1ivgnFO9C&limit=1`;
 
-         
+    $('.clear').click(function(){
+        $('#articles').empty()
+    })
 
         $.ajax({
             url: queryURL,
